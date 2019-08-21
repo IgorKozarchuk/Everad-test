@@ -1,0 +1,137 @@
+/* reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* fonts */
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Regular.eot");
+	src: local("Roboto"), local("Roboto-Regular"),
+		url("../fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Italic.eot");
+	src: local("Roboto Italic"), local("Roboto-Italic"),
+		url("../fonts/Roboto/Roboto-Italic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Italic.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Medium.eot");
+	src: local("Roboto Medium"), local("Roboto-Medium"),
+		url("../fonts/Roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Medium.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Bold.eot");
+	src: local("Roboto Bold"), local("Roboto-Bold"),
+		url("../fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Bold.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Black.eot");
+	src: local("../fonts/Roboto/Roboto Black"), local("Roboto-Black"),
+		url("../fonts/Roboto/Roboto-Black.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Black.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+/* main styles */
+body {
+	background-color: #666; /* TODO */
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 18px;
+	color: #444;
+}
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: minmax(auto, 500px) minmax(auto, 670px);
+}
+.section-top-header {
+	background-color: #e2e2e2;
+	background: url("../img/fade-bg.png"), url("../img/room-bg.png");
+	background-size: cover, contain;
+	background-repeat: no-repeat, no-repeat;
+	max-height: 690px;
+}
+.section-top-left {
+	/*background: url("../img/feet.png"), url("../img/zoomed.png"), url("../img/circle.png");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: center, center, center;
+	background-size: auto auto, 571px 572px, 540px 690px;*/
+	position: relative;
+}
+.mikotsin {
+	position: relative;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	z-index: 9;
+	padding-top: 15px;
+	color: #383334;
+}
+.mikotsin-left {
+	justify-self: end;
+}
+.mikotsin-right {
+	align-self: center;
+	padding-left: 18px;
+}
+.mikotsin-name {
+	font-size: 22px;
+	font-weight: 900;
+}
+.mikotsin-img {
+	padding-top: 30px;
+}
+img#feet {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 763px;
+	z-index: 2;
+}
+img#circle {
+	max-width: 628px;
+	z-index: 1;
+	float: right;
+	margin-right: 25px;
+}
+
+.section-top-footer {
+	background: url("../img/wave-bg.png");
+	background-repeat: no-repeat;
+	height: 146px;
+	/* bg overflow container */
+	/*https://stackoverflow.com/questions/4280886/can-a-background-image-be-larger-than-the-div-itself*/
+	margin-top: -27px;
+	padding-top: 27px;
+}
+/* media queries */
+@media only screen and (max-width: 320px) {
+
+}
+/* PS */
+
