@@ -78,10 +78,6 @@ body {
 	max-height: 690px;
 }
 .section-top-left {
-	/*background: url("../img/feet.png"), url("../img/zoomed.png"), url("../img/circle.png");
-	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: center, center, center;
-	background-size: auto auto, 571px 572px, 540px 690px;*/
 	position: relative;
 }
 .mikotsin {
@@ -109,7 +105,7 @@ body {
 img#feet {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -4px;
 	max-width: 763px;
 	z-index: 2;
 }
@@ -117,17 +113,25 @@ img#circle {
 	max-width: 628px;
 	z-index: 1;
 	float: right;
-	margin-right: 25px;
+	margin-right: 26px;
 }
-
 .section-top-footer {
 	background: url("../img/wave-bg.png");
-	background-repeat: no-repeat;
-	height: 146px;
+	background-repeat: repeat-x;
+	height: 173px;
 	/* bg overflow container */
 	/*https://stackoverflow.com/questions/4280886/can-a-background-image-be-larger-than-the-div-itself*/
-	margin-top: -27px;
-	padding-top: 27px;
+	margin-top: -22px;
+}
+.section-top-footer .container {
+	position: relative;
+	height: 100%;
+}
+img#pills {
+	position: absolute;
+	bottom: -42px;
+	left: -90px;
+	z-index: 3;
 }
 /* media queries */
 @media only screen and (max-width: 320px) {
