@@ -27,6 +27,16 @@
 }
 @font-face {
 	font-family: "Roboto";
+	src: url("../fonts/Roboto/Roboto-Light.eot");
+	src: local("Roboto Light"), local("Roboto-Light"),
+		url("../fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Roboto/Roboto-Light.woff") format("woff"),
+		url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
 	src: url("../fonts/Roboto/Roboto-Medium.eot");
 	src: local("Roboto Medium"), local("Roboto-Medium"),
 		url("../fonts/Roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
@@ -128,11 +138,23 @@ img#circle {
 	position: relative;
 	height: 100%;
 }
-img#pills {
+#pills {
 	position: absolute;
 	bottom: -42px;
 	left: -90px;
 	z-index: 3;
+}
+.svg-container {
+	position: absolute;
+	z-index: 9;
+}
+#price-orange {
+	bottom: 323px;
+	left: 245px;
+}
+#price-green {
+	bottom: 190px;
+	left: 350px;
 }
 .top-right-header {
 	display: grid;
@@ -223,9 +245,70 @@ img#pills {
 	grid-template-rows: 60px;
 	align-items: center;
 }
+.order-form-container {
+	display: grid;
+	grid-auto-rows: minmax(min-content, max-content);
+	position: relative;
+}
+.delivery {
+	justify-self: center;
+	align-self: start;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: #444;
+}
+.delivery img {
+	margin-right: 8px;
+}
+.svg-phone-container {
+	position: absolute;
+	z-index: 9;
+}
+#svg-phone {
+	filter: drop-shadow(0px 0px 40px rgba(29, 91, 152, 0.1));
+}
 
+.order {
+	position: absolute;
+	z-index: 10;
+	width: 270px;
+}
+.order h3 {
+	font-size: 20px;
+	color: #000;
+	font-weight: normal;
+	margin-top: 53px;
+	text-align: center;
+}
+.orange-text {
+	color: #ff6b00;
+	font-weight: 500;
+	line-height: 1.15;
+}
+.order-price {}
+.order-price .price-old-text {
+	font-size: 14px;
+	color: #666;
+}
+.order-price .price-new-text {
+	font-size: 14px;
+	color: #000;
+}
+.order-price .price-old-value {
+	font-size: 34px;
+	font-weight: 300;
+}
+.order-price .price-new-value {
+	font-size: 34px;
+	font-weight: 900;
+}
+.order-price .price-new-value .money-sign {
+	font-weight: 500;
+}
 /* media queries */
 @media only screen and (max-width: 320px) {
 
 }
 /* PS */
+
