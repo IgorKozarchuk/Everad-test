@@ -87,9 +87,8 @@ input, textarea, button {
 .section-top-header {
 	background-color: #e2e2e2;
 	background: url("../img/fade-bg.png"), url("../img/room-bg.png");
-	background-size: cover, contain;
-	background-repeat: no-repeat, no-repeat;
-	max-height: 690px;
+	background-size: cover, cover;
+	background-repeat: repeat, repeat;
 }
 .section-top-left {
 	position: relative;
@@ -116,14 +115,14 @@ input, textarea, button {
 .mikotsin-img {
 	padding-top: 30px;
 }
-img#feet {
+#feet {
 	position: absolute;
 	top: 0;
 	right: -4px;
 	max-width: 763px;
 	z-index: 2;
 }
-img#circle {
+#circle {
 	max-width: 628px;
 	z-index: 1;
 	float: right;
@@ -250,9 +249,10 @@ img#circle {
 }
 .order-form-container {
 	display: grid;
-	grid-auto-rows: minmax(min-content, max-content);
+	/*grid-auto-rows: minmax(min-content, max-content);*/
 	position: relative;
 	width: 270px;
+	/*height: 570px;*/
 }
 .delivery {
 	justify-self: center;
@@ -402,7 +402,7 @@ img#circle {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	transition: all 0.5s;
+	transition: all 0.4s;
 }
 #order-form button[type="submit"]:hover {
 	filter: brightness(92%);
@@ -432,6 +432,7 @@ img#circle {
 }
 .amount-left {
 	color: #9dbd39;
+	font-weight: 500;
 }
 .order-footer {
 	position: absolute;
@@ -450,7 +451,52 @@ img#circle {
 .order-footer span {
 	padding-left: 40px;
 }
+.svg-arrow-container {
+	position: absolute;
+	top: 165px;
+	left: 250px;
+	z-index: 11;
+}
+
 /* media queries */
+@media only screen and (max-width: 1580px) {
+	.section-top-header {
+		background-size: cover, cover;
+		background-repeat: no-repeat, repeat-y;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	.grid-container {
+		grid-template-columns: 1fr 1fr;
+	}
+	.top-right-header {
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+	}
+	.top-right-header .header-item {
+		margin-bottom: 10px;
+	}
+	.top-right-header > .header-item:last-child {
+		grid-column: span 2;
+	}
+	.top-right-content {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		margin-top: 30px;
+	}
+	.order-form-container {
+		margin-top: 60px;
+		height: 570px;
+	}
+	.section-top-footer {
+		position: relative;
+	}
+	.section-top-footer .container {
+		position: absolute;
+		left: 200px;
+		bottom: 400px;
+	}
+}
 @media only screen and (max-width: 320px) {
 
 }
