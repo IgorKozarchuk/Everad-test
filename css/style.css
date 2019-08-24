@@ -76,6 +76,13 @@ body {
 input, textarea, button {
 	font-family: "Roboto", Arial, sans-serif;
 }
+.section-top-header {
+	background-color: #e2e2e2;
+	background: url("../img/fade-bg.png"), url("../img/room-bg.png");
+	background-size: cover, contain;
+	background-repeat: repeat-y, repeat-y;
+	max-height: 690px;
+}
 .container {
 	max-width: 1170px;
 	margin: auto;
@@ -84,11 +91,10 @@ input, textarea, button {
 	display: grid;
 	grid-template-columns: minmax(auto, 500px) minmax(auto, 670px);
 }
-.section-top-header {
-	background-color: #e2e2e2;
-	background: url("../img/fade-bg.png"), url("../img/room-bg.png");
-	background-size: cover, cover;
-	background-repeat: repeat, repeat;
+.section-top-left,
+.section-top-right {
+	/*https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items*/
+	min-width: 0;
 }
 .section-top-left {
 	position: relative;
@@ -249,10 +255,8 @@ input, textarea, button {
 }
 .order-form-container {
 	display: grid;
-	/*grid-auto-rows: minmax(min-content, max-content);*/
 	position: relative;
 	width: 270px;
-	/*height: 570px;*/
 }
 .delivery {
 	justify-self: center;
@@ -459,13 +463,12 @@ input, textarea, button {
 }
 
 /* media queries */
-@media only screen and (max-width: 1580px) {
+@media only screen and (max-width: 1400px) {
 	.section-top-header {
 		background-size: cover, cover;
-		background-repeat: no-repeat, repeat-y;
+		background-repeat: repeat, repeat;
+		max-height: none;
 	}
-}
-@media only screen and (max-width: 1400px) {
 	.grid-container {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -496,8 +499,145 @@ input, textarea, button {
 		left: 200px;
 		bottom: 400px;
 	}
+	#circle {
+		max-width: 100%;
+		height: auto;
+	}
 }
-@media only screen and (max-width: 320px) {
-
+@media only screen and (max-width: 1100px) {
+	.section-top-footer .container {
+		position: absolute;
+		left: 100px;
+		bottom: 500px;
+	}
 }
-/* PS */
+@media only screen and (max-width: 920px) {
+	.section-top-footer .container {
+		left: 50px;
+	}
+}
+@media only screen and (max-width: 870px) {
+	.header-item {
+		font-size: 14px;
+	}
+	.section-top-footer .container {
+		left: 50px;
+		bottom: 400px;
+	}
+	#feet {
+		top: 100px;
+		right: -50px;
+	}
+	#pills {
+		max-width: 400px;
+		height: auto;
+		bottom: 0;
+		left: 0;
+	}
+	#price-orange {
+		bottom: 200px;
+		left: 200px;
+	}
+	#price-green {
+		bottom: 120px;
+		left: 250px;
+	}
+	#price-orange svg .price,
+	#price-orange svg .currency,
+	#price-green svg .price,
+	#price-green svg .currency {
+		font-size: 28px;
+	}
+}
+@media only screen and (max-width: 870px) {
+	.grid-container {
+		grid-template-columns: 2fr 3fr;
+	}
+	.section-top-footer .container {
+		left: 0;
+	}
+}
+@media only screen and (max-width: 690px) {
+	.grid-container {
+		grid-template-columns: 1fr;
+	}
+	.section-top-footer .container {
+		left: 20%;
+		top: -1070px;
+	}
+	.order-form-container {
+		margin-top: 300px;
+	}
+	#circle {
+		max-width: 400px;
+	}
+	#feet {
+		top: -50px;
+		left: -100px;
+		max-width: 600px;
+	}
+}
+@media only screen and (max-width: 535px) {
+	.section-top-footer .container {
+		left: 0;
+	}
+	#feet {
+		max-width: 400px;
+	}
+	#circle {
+		max-width: 300px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.top-right-header {
+		display: block;
+	}
+	.top-right-header .header-item {
+		justify-content: center;
+	}
+	.complex-description {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.complex-heading {
+		font-size: 38px;
+	}
+	.complex-subheading {
+		font-size: 30px;
+	}
+	.complex-description .item-text {
+		font-size: 18px;
+	}
+	.complex-description .item-text br {
+		display: none;
+	}
+	.section-top-footer .container {
+		top: -1080px;
+	}
+	.order-form-container {
+		margin-top: 250px;
+	}
+	#pills {
+		max-width: 300px;
+	}
+	#price-orange {
+		bottom: 150px;
+		left: 150px;
+	}
+	#price-green {
+		bottom: 90px;
+		left: 150px;
+	}
+	#price-orange svg .price,
+	#price-orange svg .currency,
+	#price-green svg .price,
+	#price-green svg .currency {
+		font-weight: 500;
+	}
+}
+@media only screen and (max-width: 330px) {
+	.svg-arrow-container {
+		display: none;
+	}
+}
+/* PS 
