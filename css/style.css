@@ -829,6 +829,10 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	grid-column-gap: 30px;
 	text-align: left;
 }
+.section-bottom-left,
+.section-bottom-right {
+	min-width: 0;
+}
 .section-bottom-left {
 	text-align: right;
 	margin-right: -15px;
@@ -1098,6 +1102,7 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	.section-bottom-left {
 		text-align: center;
 		margin-bottom: 20px;
+		margin-right: 0;
 	}
 	.section-bottom-left > img {
 		padding-top: 0;
