@@ -809,18 +809,61 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 .section-bottom {
 	background: url("../img/wave-down-bg.png"), linear-gradient(to right, #e9f5f7 0%,#f8fdfe 50%,#e9f5f7 100%);
 	background-repeat: repeat-x;
-	padding: 160px 10px 0 10px;
+	padding: 160px 10px 20px 10px;
 	text-align: center;
 	margin-top: -65px;
 }
-
-
-
-
-
-
-
-
+.section-bottom h2 {
+	font-size: 47px;
+	color: #000;
+	font-weight: 900;
+	margin-top: 2px;
+	margin-bottom: 80px;
+}
+.section-bottom-text-orange {
+	color: #fa4f01;
+}
+.section-bottom-items {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 30px;
+	text-align: left;
+}
+.section-bottom-left {
+	text-align: right;
+	margin-right: -15px;
+	position: relative;
+}
+.section-bottom-left > img {
+	padding-top: 30px;
+}
+#section-bottom-image-front {
+	position: absolute;
+	bottom: 17px;
+	right: 55px;
+	z-index: 1;
+}
+.section-bottom-right-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.bottom-right-item-icon {
+	margin-right: 30px;
+}
+.bottom-right-item-descr {
+	font-size: 18px;
+	font-weight: 500;
+	color: #000;
+	line-height: 1.4;
+	max-width: 230px;
+	padding-top: 15px;
+	margin-top: -15px;
+	background-image: linear-gradient(to right, #7bbf1c, #7bbf1c);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 20px 3px;
+}
 /* media queries */
 @media only screen and (max-width: 1400px) {
 	.section-top-header {
@@ -941,8 +984,11 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 		font-size: 14px;
 	}
 	.section-top-footer .container {
-		left: 50px;
+		left: 0;
 		bottom: 400px;
+	}
+	.grid-container {
+		grid-template-columns: 2fr 3fr;
 	}
 	#feet {
 		top: 100px;
@@ -968,13 +1014,18 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	#price-green svg .currency {
 		font-size: 28px;
 	}
-}
-@media only screen and (max-width: 870px) {
-	.grid-container {
+	.section-bottom-items {
 		grid-template-columns: 2fr 3fr;
 	}
-	.section-top-footer .container {
-		left: 0;
+	.section-bottom-left > img {
+		max-width: 120px;
+	}
+	#section-bottom-image-front {
+		bottom: 150px;
+		right: 30px;
+	}
+	#section-bottom-image-front img {
+		max-width: 200px;
 	}
 }
 @media only screen and (max-width: 690px) {
@@ -1005,7 +1056,8 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	}
 	.section-1 h2,
 	.section-2 h2,
-	.section-3 h2 {
+	.section-3 h2,
+	.section-bottom h2 {
 		font-size: 40px;
 	}
 	.section-1-footer {
@@ -1027,7 +1079,7 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 		line-height: 1.3;
 	}
 }
-@media only screen and (max-width: 535px) {
+@media only screen and (max-width: 580px) {
 	.section-top-footer .container {
 		left: 0;
 	}
@@ -1036,6 +1088,23 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	}
 	#circle {
 		max-width: 300px;
+	}
+	.section-bottom h2 {
+		margin-bottom: 40px;
+	}
+	.section-bottom-items {
+		grid-template-columns: 1fr;
+	}
+	.section-bottom-left {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.section-bottom-left > img {
+		padding-top: 0;
+	}
+	#section-bottom-image-front {
+		bottom: -10px;
+		left: 50px;
 	}
 }
 @media only screen and (max-width: 400px) {
@@ -1095,8 +1164,15 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	}
 	.section-1 h2,
 	.section-2 h2,
-	.section-3 h2 {
+	.section-3 h2,
+	.section-bottom h2 {
 		font-size: 36px;
+	}
+	.bottom-right-item-icon {
+		margin-right: 10px;
+	}
+	.bottom-right-item-icon img {
+		max-width: 80px;
 	}
 }
 @media only screen and (max-width: 330px) {
@@ -1104,4 +1180,3 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 		display: none;
 	}
 }
-/* PS */
