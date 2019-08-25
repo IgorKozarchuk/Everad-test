@@ -1,10 +1,4 @@
-/* reset */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-/* fonts */
+/* FONTS */
 @font-face {
 	font-family: "Roboto";
 	src: url("../fonts/Roboto/Roboto-Regular.eot");
@@ -65,7 +59,13 @@
 	font-weight: 900;
 	font-style: normal;
 }
-/* main styles */
+/* RESET */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* MAIN STYLES */
 body {
 	background-color: #fff;
 	font-family: "Roboto", Arial, sans-serif;
@@ -81,7 +81,7 @@ input, textarea, button {
 	background-color: #e2e2e2;
 	background: url("../img/fade-bg.png"), url("../img/room-bg.png");
 	background-size: cover, contain;
-	background-repeat: repeat-y, repeat-y;
+	background-repeat: repeat, repeat-y;
 	max-height: 690px;
 }
 .container {
@@ -139,7 +139,7 @@ input, textarea, button {
 	background: url("../img/wave-bg.png");
 	background-repeat: repeat-x;
 	height: 173px;
-	/* bg overflow container */
+	/* bg to overflow container */
 	/*https://stackoverflow.com/questions/4280886/can-a-background-image-be-larger-than-the-div-itself*/
 	margin-top: -22px;
 }
@@ -277,7 +277,8 @@ input, textarea, button {
 #svg-phone {
 	filter: drop-shadow(0px 0px 40px rgba(29,91,152,0.1));
 }
-.order, #order-form {
+.order,
+#order-form {
 	position: absolute;
 	z-index: 10;
 	width: 270px;
@@ -590,6 +591,9 @@ input, textarea, button {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.section-2-item:last-child .section-2-item-logo {
+	transform: translate(-40%, -40%);
+}
 .card-top-cutout {
 	filter: drop-shadow(0px 0px 15px rgba(37,83,129,0.08));
 }
@@ -809,7 +813,7 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 .section-bottom {
 	background: url("../img/wave-down-bg.png"), linear-gradient(to right, #e9f5f7 0%,#f8fdfe 50%,#e9f5f7 100%);
 	background-repeat: repeat-x;
-	padding: 160px 10px 20px 10px;
+	padding: 180px 10px 20px 10px;
 	text-align: center;
 	margin-top: -65px;
 }
@@ -868,7 +872,7 @@ https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
 	background-position: 0 0;
 	background-size: 20px 3px;
 }
-/* media queries */
+/* MEDIA QUERIES */
 @media only screen and (max-width: 1400px) {
 	.section-top-header {
 		background-size: cover, cover;
