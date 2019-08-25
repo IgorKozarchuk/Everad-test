@@ -527,7 +527,7 @@ input, textarea, button {
 	border-radius: 8px;
 	position: relative;
 	padding: 40px 70px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
 .section-1-footer-gap {
 	display: flex;
@@ -566,7 +566,7 @@ input, textarea, button {
 .section-2 {
 	background: url("../img/wave-down-bg.png"), linear-gradient(to right, #e9f5f7 0%,#f8fdfe 50%,#e9f5f7 100%);
 	background-repeat: repeat-x;
-	padding: 160px 10px 60px 10px;
+	padding: 160px 10px 0 10px;
 	text-align: center;
 }
 .section-2 h2 {
@@ -641,7 +641,7 @@ input, textarea, button {
 	margin-top: 60px;
 	border: 3px solid #f4d3bb;
 	border-top: 0;
-	border-radius: 8px;
+	border-radius: 10px;
 	position: relative;
 	padding: 22px 70px;
 }
@@ -655,18 +655,18 @@ input, textarea, button {
 }
 .section-2-footer-gap::before,
 .section-2-footer-gap::after {
-	border-radius: 8px 0 0 0;
+	border-radius: 10px 0 0 0;
 	display: block;
 	content: "";
 	flex: 2 0 0;
-	height: 3px;
+	height: 4px;
 	border-top: 3px solid #f4d3bb;
 }
 .section-2-footer-gap::after {
-	border-radius: 0 8px 0 0;
+	border-radius: 0 10px 0 0;
 }
 .section-2-footer-gap-content {
-	margin-top: -8px;
+	margin-top: -10px;
 	flex: 0 0 170px;
 }
 .section-2-footer-text {
@@ -697,6 +697,130 @@ input, textarea, button {
 	transform: translateX(-50%);
 	z-index: -1;
 }
+.section-2-bottom-bg {
+	background: url("../img/wave-bg.png");
+	background-repeat: repeat-x;
+	height: 173px;
+	/* negative margins compensate section-2 paddings */
+	margin-left: -10px;
+	margin-right: -10px;
+	/* bg overflow container */
+	/*https://stackoverflow.com/questions/4280886/can-a-background-image-be-larger-than-the-div-itself*/
+	margin-top: 60px;
+}
+/* section 3 */
+.section-3 {
+	margin-top: -110px;
+	padding: 0 10px 0 10px;
+	text-align: center;
+}
+.section-3 h2 {
+	font-size: 47px;
+	color: #000;
+	font-weight: 900;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.section-3-bold-orange {
+	color: #fa4f01;
+}
+.section-3 h4 {
+	font-size: 23px;
+	color: #444;
+	font-weight: normal;
+}
+.section-3-items {
+	margin-top: 90px;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(auto, 370px));
+	justify-content: space-between;	
+}
+.section-3-item {
+	position: relative;
+	min-width: 0;
+}
+.section-3-item-logo {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -68%);
+}
+.section-3-item-content {
+	position: absolute;
+	top: 50px;
+	padding: 20px 15px;
+}
+.section-3-item-content h4 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+.section-3-item-content div {
+	font-size: 18px;
+	font-weight: normal;
+	color: #444;
+	line-height: 1.4;
+}
+.section-3-item-text-bold {
+	font-weight: 500;
+	color: #000;
+}
+.section-3-footer-content {
+	font-size: 27px;
+	font-weight: 500;
+	color: #000;
+	line-height: 1.3;
+	padding: 22px 10px;
+	margin-top: 25px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 860px;
+}
+.section-3-footer-text-orange {
+	color: #f64d01;
+}
+/*
+https://css-tricks.com/gradient-borders-in-css/
+https://codepen.io/AlexOverbeck/pen/axGQyv?editors=1100
+*/
+.border-gradient {
+	box-sizing: border-box;
+	position: relative;
+	border: solid transparent;
+	border-width: 8px; /* 2x of final border-width */
+	border-radius: 12px;
+	background: linear-gradient(#fff, #fff), /* background */
+	linear-gradient(94deg, #f64d01 0%,#62bd1f 100%); /* borders */
+	background-repeat: no-repeat; /* this is important */
+	background-origin: padding-box, border-box;
+}
+.border-gradient::before {
+	content: "";
+	position: absolute;
+	top: -4px; /* final border-width */
+	bottom: -4px;
+	left: -4px;
+	right: -4px;
+	border: 6px solid #fff; /* background border */
+	border-radius: 8px; /* 2x of final border-width */
+}
+/* section bottom */
+.section-bottom {
+	background: url("../img/wave-down-bg.png"), linear-gradient(to right, #e9f5f7 0%,#f8fdfe 50%,#e9f5f7 100%);
+	background-repeat: repeat-x;
+	padding: 160px 10px 0 10px;
+	text-align: center;
+	margin-top: -65px;
+}
+
+
+
+
+
+
+
+
 /* media queries */
 @media only screen and (max-width: 1400px) {
 	.section-top-header {
@@ -749,16 +873,26 @@ input, textarea, button {
 	}
 }
 @media only screen and (max-width: 1150px) {
-	.section-2-items {
+	.section-2-items,
+	.section-3-items {
 		grid-template-columns: repeat(3, minmax(auto, 320px));
 	}
-	.section-2-item {
+	.section-2-item,
+	.section-3-item {
 		width: 320px;
 	}
 	.section-2-item-top div,
 	.section-2-item-bottom div {
 		font-size: 16px;
-		line-height: 1.3
+		line-height: 1.3;
+	}
+	.section-3-item-content h4 {
+		margin-top: 0;
+	}
+	.section-3-item-content div,
+	.section-3-item-content div {
+		font-size: 16px;
+		line-height: 1.3;
 	}
 }
 @media only screen and (max-width: 1100px) {
@@ -779,16 +913,22 @@ input, textarea, button {
 	}
 }
 @media only screen and (max-width: 990px) {
-	.section-2-items {
+	.section-2-items,
+	.section-3-items {
 		grid-template-columns: repeat(2, minmax(auto, 320px));
 		justify-content: space-around;
 	}
-	.section-2-item:not(:last-child) {
-		margin-bottom: 50px;
+	.section-2-item:not(:last-child),
+	.section-3-item:not(:last-child) {
+		margin-bottom: 70px;
 	}
-	.section-2-item:last-child {
+	.section-2-item:last-child,
+	.section-3-item:last-child {
 		grid-column: 1/3;
 		justify-self: center;
+	}
+	.section-3-footer-content {
+		font-size: 22px;
 	}
 }
 @media only screen and (max-width: 920px) {
@@ -864,16 +1004,19 @@ input, textarea, button {
 		grid-template-columns: 1fr;
 	}
 	.section-1 h2,
-	.section-2 h2 {
+	.section-2 h2,
+	.section-3 h2 {
 		font-size: 40px;
 	}
 	.section-1-footer {
 		padding: 30px 30px;
 	}
-	.section-2-item:last-child {
+	.section-2-item:last-child,
+	.section-3-item:last-child {
 		grid-column: 1/1;
 	}
-	.section-2-items {
+	.section-2-items,
+	.section-3-items {
 		grid-template-columns: 320px;
 	}
 	.section-2-footer {
@@ -950,7 +1093,9 @@ input, textarea, button {
 	.section-1-footer-text {
 		font-size: 19px;
 	}
-	.section-2 h2 {
+	.section-1 h2,
+	.section-2 h2,
+	.section-3 h2 {
 		font-size: 36px;
 	}
 }
